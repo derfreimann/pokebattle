@@ -11,14 +11,15 @@ static GFont *level_font;
 static GFont *date_font;
 static GFont *time_font;
 
-
 #define NUM_LEVEL_PKEY  0
 #define NUM_LEVEL_FRESH 5
 
 int level_int = 5;					
-const char level_text;				
-TextLayer *text_level_ally_layer;	
-TextLayer *text_level_enemy_layer;	
+TextLayer *text_level_ally_layer;
+TextLayer *text_level_enemy_layer;
+
+TextLayer *text_name_ally_layer;
+TextLayer *text_name_enemy_layer;
 
 TextLayer *text_time_layer;
 TextLayer *text_date_layer;
@@ -34,14 +35,11 @@ static bool initiate_watchface = true;
 int NUM_POK_ALLY  = 20;
 int NUM_POK_ENEMY = 22;
 
-// BT connectivity
-static bool connected;		//variable checks the connection state
-
 //random number shenanigans
 int seed_enemy2, seed_ally2;
 int start_number_enemy, start_number_ally, random_enemy, random_ally;	//values needed for random number generation 
 
-// ACTUAL NUMBER OF DIFFERENT POKEMONS = ** 36 **
+// ACTUAL NUMBER OF DIFFERENT POKEMON = ** 36 **
 
 /* ---POKEMON ENEMY--- */
 const int POK_ENEMY_IMAGE_RESOURCE_IDS[] = {
@@ -70,29 +68,29 @@ const int POK_ENEMY_IMAGE_RESOURCE_IDS[] = {
 };
 
 /* ---POKEMON ENEMY NAME--- */
-const int NAMES_ENEMY_IMAGE_RESOURCE_IDS[] = {
- 	RESOURCE_ID_IMAGE_NAME_BLUE,	 	// 0
- 	RESOURCE_ID_IMAGE_NAME_CHARMANDER,	// 1
- 	RESOURCE_ID_IMAGE_NAME_CYNDAQUIL,	// 2
- 	RESOURCE_ID_IMAGE_NAME_EEVEE,	 	// 3
- 	RESOURCE_ID_IMAGE_NAME_DITTO,	 	// 4
- 	RESOURCE_ID_IMAGE_NAME_FROAKIE,	 	// 5
- 	RESOURCE_ID_IMAGE_NAME_MAGIKARP,	// 6
- 	RESOURCE_ID_IMAGE_NAME_MISSINGNO,	// 7
- 	RESOURCE_ID_IMAGE_NAME_OSHAWATT,	// 8
- 	RESOURCE_ID_IMAGE_NAME_TORCHIC,	 	// 9
- 	RESOURCE_ID_IMAGE_NAME_TURTWIG,	 	// 10
- 	RESOURCE_ID_IMAGE_NAME_WEEDLE,	 	// 11
- 	RESOURCE_ID_IMAGE_NAME_PIKACHU,	 	// 12
-	RESOURCE_ID_IMAGE_NAME_PSYDUCK,	 	// 13
- 	RESOURCE_ID_IMAGE_NAME_GASTLY,	 	// 14
- 	RESOURCE_ID_IMAGE_NAME_SEEL,	 	// 15
- 	RESOURCE_ID_IMAGE_NAME_HAUNTER,	 	// 16
- 	RESOURCE_ID_IMAGE_NAME_FERROSEED,	// 17 NEU
- 	RESOURCE_ID_IMAGE_NAME_FOONGUS,		// 18 NEU
-	RESOURCE_ID_IMAGE_NAME_SLOWPOKE,	// 19 NEU
-	RESOURCE_ID_IMAGE_NAME_HOUNDOUR,	// 20 NEU
-	RESOURCE_ID_IMAGE_NAME_LORD_HELIX	// 21 NEU
+char* NAMES_ENEMY_IMAGE_RESOURCE_IDS[] = {
+ 	"BLUE",
+  "CHARMANDER",
+ 	"CYNDAQUIL",
+ 	"EEVEE",
+ 	"DITTO",
+ 	"FROAKIE",
+ 	"MAGIKARP",
+ 	"MISSINGNO",
+ 	"OSHAWATT",
+ 	"TORCHIC",
+ 	"TURTWIG",
+ 	"WEEDLE",
+ 	"PIKACHU",
+	"PSYDUCK",
+ 	"GASTLY",
+ 	"SEEL",
+ 	"HAUNTER",
+ 	"FERROSEED",
+ 	"FOONGUS",
+	"SLOWPOKE",
+	"HOUNDOUR",
+	"LORD_HELIX"
 };
 
 /* ---POKEMON ALLY--- */
@@ -120,27 +118,27 @@ const int POK_ALLY_IMAGE_RESOURCE_IDS[] = {
 };
 
 /* ---POKEMON ALLY NAME-- */
-const int NAMES_ALLY_IMAGE_RESOURCE_IDS[] = {
- 	RESOURCE_ID_IMAGE_NAME_CHIKORITA,	// 0
- 	RESOURCE_ID_IMAGE_NAME_BULBASAUR,	// 1
- 	RESOURCE_ID_IMAGE_NAME_FENNEKIN,	// 2
- 	RESOURCE_ID_IMAGE_NAME_DITTO,	 	// 3
- 	RESOURCE_ID_IMAGE_NAME_MEWTWO,	 	// 4
- 	RESOURCE_ID_IMAGE_NAME_MAGIKARP,	// 5
- 	RESOURCE_ID_IMAGE_NAME_TEPIG,	 	// 6
- 	RESOURCE_ID_IMAGE_NAME_TREECKO,	 	// 7
- 	RESOURCE_ID_IMAGE_NAME_RED,	 		// 8
- 	RESOURCE_ID_IMAGE_NAME_PIPLUP,	 	// 9
- 	RESOURCE_ID_IMAGE_NAME_PIKACHU,	 	// 10
- 	RESOURCE_ID_IMAGE_NAME_OLDMAN,	 	// 11
- 	RESOURCE_ID_IMAGE_NAME_PIDGEY,	 	// 12
- 	RESOURCE_ID_IMAGE_NAME_TEDDYURSA,	// 13
- 	RESOURCE_ID_IMAGE_NAME_PSYDUCK,	  	// 14
- 	RESOURCE_ID_IMAGE_NAME_LUGIA,	  	// 15 NEU
- 	RESOURCE_ID_IMAGE_NAME_KRABBY,	  	// 16 NEU
-	RESOURCE_ID_IMAGE_NAME_ARON,		// 17 NEU
-	RESOURCE_ID_IMAGE_NAME_GEODUDE,		// 18 NEU
-	RESOURCE_ID_IMAGE_NAME_LARVITAR		// 19 NEU
+char* NAMES_ALLY_IMAGE_RESOURCE_IDS[] = {
+ 	"CHIKORITA",
+ 	"BULBASAUR",
+ 	"FENNEKIN",
+ 	"DITTO",
+ 	"MEWTWO",
+ 	"MAGIKARP",
+ 	"TEPIG",
+ 	"TREECKO",
+ 	"RED",
+ 	"PIPLUP",
+ 	"PIKACHU",
+ 	"OLDMAN",
+ 	"PIDGEY",
+ 	"TEDDYURSA",
+ 	"PSYDUCK",
+ 	"LUGIA",
+ 	"KRABBY",
+	"ARON",
+	"GEODUDE",
+	"LARVITAR"
 };
 
 /* ---HEALTH BAR ENEMY--- */  // --> ALLY health bar represents Pebble's battery!!!
@@ -165,10 +163,6 @@ const int BT_BLACK_IMAGE_RESOURCE_IDS[] = {
 #define TOTAL_POK_DIGITS 2
 static GBitmap *pok_digits_images[TOTAL_POK_DIGITS];
 static BitmapLayer *pok_digits_layers[TOTAL_POK_DIGITS];
-
-#define TOTAL_NAMES_DIGITS 2
-static GBitmap *names_digits_images[TOTAL_NAMES_DIGITS];
-static BitmapLayer *names_digits_layers[TOTAL_NAMES_DIGITS];
 
 #define TOTAL_HP_DIGITS 1
 static GBitmap *hp_digits_images[TOTAL_HP_DIGITS];
@@ -240,9 +234,9 @@ static void handle_bluetooth(bool connected) {
 
 static void update_display(struct tm *current_time) {
 	
-	static char level_string[100]; //define length of string used to display int 'level_int'
+	static char level_string[8]; //define length of string used to display int 'level_int'
 	
- 	if( ((current_time->tm_min == 0) && (current_time->tm_sec == 0)) || (initiate_watchface == true) ){ 
+ 	if( ((current_time->tm_min == 0) && (current_time->tm_sec == 0)) || (initiate_watchface == true) ) { 
 
 		//only calculate the the base for the random number generators ONCE @ watchface initiation
 		if (initiate_watchface){
@@ -258,31 +252,23 @@ static void update_display(struct tm *current_time) {
 		seed_ally  = (((seed_ally * 214013L + 2531011L) >> 16) & 32767);
 		seed_ally2 = seed_ally + start_number_ally;
 		random_ally = (seed_ally2 % NUM_POK_ALLY);
-    	APP_LOG(APP_LOG_LEVEL_DEBUG, "random ALLY generated [#%d].", random_ally);
-    
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "random ALLY generated [#%d].", random_ally);
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "random ALLY is [%s]", NAMES_ALLY_IMAGE_RESOURCE_IDS[random_ally]);
+    text_layer_set_text(text_name_ally_layer, NAMES_ALLY_IMAGE_RESOURCE_IDS[random_ally]);
+
+   
 		static long seed_enemy = 100;
 		seed_enemy  = (((seed_enemy * 214013L + 2531011L) >> 16) & 32767);
 		seed_enemy2 = seed_enemy + start_number_enemy;
 		random_enemy = (seed_enemy2 % NUM_POK_ENEMY);
-    	APP_LOG(APP_LOG_LEVEL_DEBUG, "random ENEMY generated [#%d].", random_enemy);
-	
-// THIS IS WHERE IT ALL CRASHES SOONER OR LATER !!!!!!
-// do NOT use that code Mathew! :P
-//===============================================================================================================
-/*			
-  			old_enemy = current_enemy;
-   			while(old_enemy == current_enemy) current_enemy = random_enemy;
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "random ENEMY generated [#%d].", random_enemy);
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "random ENEMY is [%s]", NAMES_ENEMY_IMAGE_RESOURCE_IDS[random_enemy]);
+    text_layer_set_text(text_name_enemy_layer, NAMES_ENEMY_IMAGE_RESOURCE_IDS[random_enemy]);
 
-   			old_ally = current_ally;
-   			while(old_ally == current_ally) current_ally = random_ally;
-*/
-//===============================================================================================================
-		
- 	  	set_container_image(&pok_digits_images[1], pok_digits_layers[1], POK_ENEMY_IMAGE_RESOURCE_IDS[random_enemy], GPoint(90, 5));
- 	  	set_container_image(&pok_digits_images[0], pok_digits_layers[0], POK_ALLY_IMAGE_RESOURCE_IDS[random_ally], GPoint(5, 60));
- 	  	set_container_image(&names_digits_images[0], names_digits_layers[0], NAMES_ENEMY_IMAGE_RESOURCE_IDS[random_enemy], GPoint(5, 9));
- 	  	set_container_image(&names_digits_images[1], names_digits_layers[1], NAMES_ALLY_IMAGE_RESOURCE_IDS[random_ally], GPoint(67, 70));
-   		APP_LOG(APP_LOG_LEVEL_DEBUG, "drawing Pokemons complete!!!");	
+			
+ 	  set_container_image(&pok_digits_images[1], pok_digits_layers[1], POK_ENEMY_IMAGE_RESOURCE_IDS[random_enemy], GPoint(90, 5));
+ 	  set_container_image(&pok_digits_images[0], pok_digits_layers[0], POK_ALLY_IMAGE_RESOURCE_IDS[random_ally], GPoint(5, 60));
+    APP_LOG(APP_LOG_LEVEL_DEBUG, "drawing Pokemon complete!!!");
 	}
 	
 	if (initiate_watchface) {
@@ -352,7 +338,7 @@ static void handle_minute_tick(struct tm *tick_time, TimeUnits units_changed) {
  	update_display(tick_time);
 
  	static char time_text[] = "00:00";
- 	static char date_text[] = "Xxx,00.00.";
+ 	static char date_text[] = "Xxx,00.00";
 
  	char *time_format;
  	char *date_format;
@@ -395,11 +381,6 @@ void window_unload(Window *window){
    		gbitmap_destroy(pok_digits_images[i]);
    		bitmap_layer_destroy(pok_digits_layers[i]);
 	}
- 	for (int i = 0; i < TOTAL_NAMES_DIGITS; i++) {
-   		layer_remove_from_parent(bitmap_layer_get_layer(names_digits_layers[i]));
-   		gbitmap_destroy(names_digits_images[i]);
-   		bitmap_layer_destroy(names_digits_layers[i]);
-	}
  	for (int i = 0; i < TOTAL_HP_DIGITS; i++) {
    		layer_remove_from_parent(bitmap_layer_get_layer(hp_digits_layers[i]));
    		gbitmap_destroy(hp_digits_images[i]);
@@ -434,17 +415,12 @@ static void init(void) {
    		pok_digits_layers[i] = bitmap_layer_create(dummy_frame);
    		layer_add_child(window_layer, bitmap_layer_get_layer(pok_digits_layers[i]));
 	}
- 	for (int i = 0; i < TOTAL_NAMES_DIGITS; ++i) {
-   		names_digits_layers[i] = bitmap_layer_create(dummy_frame);
-   		layer_add_child(window_layer, bitmap_layer_get_layer(names_digits_layers[i]));
-	}
  	for (int i = 0; i < TOTAL_HP_DIGITS; ++i) {
    		hp_digits_layers[i] = bitmap_layer_create(dummy_frame);
    		layer_add_child(window_layer, bitmap_layer_get_layer(hp_digits_layers[i]));
 	}
 
 	level_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_LEVEL_10));
- 	//date_font  = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_DATE_9));
  	date_font  = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_DATE_7));
  	time_font  = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_TIME_24));
 
@@ -465,10 +441,22 @@ static void init(void) {
  	text_layer_set_background_color(text_level_ally_layer, GColorClear);
  	text_layer_set_font(text_level_ally_layer, level_font);
  	layer_add_child(window_layer, text_layer_get_layer(text_level_ally_layer));
+  
+  text_name_enemy_layer = text_layer_create(GRect(5, 9, 76, 9));
+  text_layer_set_text_alignment(text_name_enemy_layer, GTextAlignmentLeft);
+ 	text_layer_set_text_color(text_name_enemy_layer, GColorBlack);
+ 	text_layer_set_background_color(text_name_enemy_layer, GColorClear);
+ 	text_layer_set_font(text_name_enemy_layer, date_font);
+ 	layer_add_child(window_layer, text_layer_get_layer(text_name_enemy_layer));
 	
-	//text_date_layer = text_layer_create(GRect(81, 95, 60, 10));
+  text_name_ally_layer = text_layer_create(GRect(67, 70, 76, 9));
+  text_layer_set_text_alignment(text_name_ally_layer, GTextAlignmentLeft);
+ 	text_layer_set_text_color(text_name_ally_layer, GColorBlack);
+ 	text_layer_set_background_color(text_name_ally_layer, GColorClear);
+ 	text_layer_set_font(text_name_ally_layer, date_font);
+ 	layer_add_child(window_layer, text_layer_get_layer(text_name_ally_layer));
+  
 	text_date_layer = text_layer_create(GRect(59, 97, 76, 10));
-	//text_layer_set_text_alignment(text_date_layer, GTextAlignmentCenter);
 	text_layer_set_text_alignment(text_date_layer, GTextAlignmentRight);
  	text_layer_set_text_color(text_date_layer, GColorBlack);
  	text_layer_set_background_color(text_date_layer, GColorClear);
@@ -523,39 +511,12 @@ static void deinit(void) {
   	persist_write_int(NUM_LEVEL_PKEY, level_int);
    	APP_LOG(APP_LOG_LEVEL_INFO, "level status of %d saved!", level_int);
 	
-/*
-// THIS IS NOW ALL HAPPENING IN 'INIT()' TO FREE THE MEMORY ALL THE TIME
- 	layer_remove_from_parent(bitmap_layer_get_layer(background_layer));
- 	bitmap_layer_destroy(background_layer);
- 	gbitmap_destroy(background_image);
-
- 	for (int i = 0; i < TOTAL_POK_DIGITS; i++) {
-   		layer_remove_from_parent(bitmap_layer_get_layer(pok_digits_layers[i]));
-   		gbitmap_destroy(pok_digits_images[i]);
-   		bitmap_layer_destroy(pok_digits_layers[i]);
-	}
- 	for (int i = 0; i < TOTAL_NAMES_DIGITS; i++) {
-   		layer_remove_from_parent(bitmap_layer_get_layer(names_digits_layers[i]));
-   		gbitmap_destroy(names_digits_images[i]);
-   		bitmap_layer_destroy(names_digits_layers[i]);
-	}
- 	for (int i = 0; i < TOTAL_HP_DIGITS; i++) {
-   		layer_remove_from_parent(bitmap_layer_get_layer(hp_digits_layers[i]));
-   		gbitmap_destroy(hp_digits_images[i]);
-   		bitmap_layer_destroy(hp_digits_layers[i]);
-	}
-   	for (int i = 0; i < TOTAL_BT_DIGITS; i++) {
-     	layer_remove_from_parent(bitmap_layer_get_layer(bt_digits_layers[i]));
-     	gbitmap_destroy(bt_digits_images[i]);
-     	bitmap_layer_destroy(bt_digits_layers[i]);
- 	}
-
-	gbitmap_destroy(icon_battery_charge);	
-*/
  	text_layer_destroy(text_level_ally_layer);
  	text_layer_destroy(text_level_enemy_layer);
  	text_layer_destroy(text_time_layer);
  	text_layer_destroy(text_date_layer);
+  text_layer_destroy(text_name_ally_layer);
+  text_layer_destroy(text_name_enemy_layer);
  	fonts_unload_custom_font(time_font);
  	fonts_unload_custom_font(date_font);
  	fonts_unload_custom_font(level_font);
