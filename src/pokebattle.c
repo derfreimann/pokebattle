@@ -32,14 +32,12 @@ static Layer *battery_layer;
 
 static bool initiate_watchface = true;
 
-int NUM_POK_ALLY  = 20;
+int NUM_POK_ALLY  = 22;
 int NUM_POK_ENEMY = 22;
 
 //random number shenanigans
 int seed_enemy2, seed_ally2;
 int start_number_enemy, start_number_ally, random_enemy, random_ally;	//values needed for random number generation 
-
-// ACTUAL NUMBER OF DIFFERENT POKEMON = ** 36 **
 
 /* ---POKEMON ENEMY--- */
 const int POK_ENEMY_IMAGE_RESOURCE_IDS[] = {
@@ -114,7 +112,9 @@ const int POK_ALLY_IMAGE_RESOURCE_IDS[] = {
  	RESOURCE_ID_IMAGE_ALLY_KRABBY,	  	// 16 NEU
 	RESOURCE_ID_IMAGE_ALLY_ARON,		// 17 NEU
 	RESOURCE_ID_IMAGE_ALLY_GEODUDE,		// 18 NEU
-	RESOURCE_ID_IMAGE_ALLY_LARVITAR		// 19 NEU
+	RESOURCE_ID_IMAGE_ALLY_LARVITAR,		// 19 NEU
+  RESOURCE_ID_IMAGE_ALLY_HAUNTER,
+  RESOURCE_ID_IMAGE_ALLY_STARMIE
 };
 
 /* ---POKEMON ALLY NAME-- */
@@ -138,7 +138,9 @@ char* NAMES_ALLY_IMAGE_RESOURCE_IDS[] = {
  	"KRABBY",
 	"ARON",
 	"GEODUDE",
-	"LARVITAR"
+	"LARVITAR",
+  "HAUNTER",
+  "STARMIE",
 };
 
 /* ---HEALTH BAR ENEMY--- */  // --> ALLY health bar represents Pebble's battery!!!

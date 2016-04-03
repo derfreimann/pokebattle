@@ -9,6 +9,16 @@
     "resources": {
         "media": [
             {
+                "file": "images/IMAGE_ALLY_STARMIE.png",
+                "name": "IMAGE_ALLY_STARMIE",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_HAUNTER.png",
+                "name": "IMAGE_ALLY_HAUNTER",
+                "type": "png"
+            },
+            {
                 "file": "images/poke_sleep.png",
                 "name": "IMAGE_POKE_SLEEP",
                 "type": "png-trans"
