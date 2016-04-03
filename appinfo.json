@@ -9,85 +9,306 @@
     "resources": {
         "media": [
             {
-                "file": "images/bw_psyduck_unten.png",
-                "name": "IMAGE_ALLY_PSYDUCK",
+                "file": "images/IMAGE_ENEMY_ZAPDOS.png",
+                "name": "IMAGE_ENEMY_ZAPDOS",
                 "type": "png"
             },
             {
-                "file": "images/ally-teddiursa.png",
-                "name": "IMAGE_ALLY_TEDDYURSA",
+                "file": "images/IMAGE_ENEMY_GOLEM.png",
+                "name": "IMAGE_ENEMY_GOLEM",
                 "type": "png"
             },
             {
-                "file": "images/ally-pidgey.png",
-                "name": "IMAGE_ALLY_PIDGEY",
+                "file": "images/IMAGE_ENEMY_STARMIE.png",
+                "name": "IMAGE_ENEMY_STARMIE",
                 "type": "png"
             },
             {
-                "file": "images/enemy-seel.png",
-                "name": "IMAGE_ENEMY_SEEL",
+                "file": "images/IMAGE_ENEMY_GENGAR.png",
+                "name": "IMAGE_ENEMY_GENGAR",
                 "type": "png"
             },
             {
-                "file": "images/enemy-haunter.png",
-                "name": "IMAGE_ENEMY_HAUNTER",
+                "file": "images/IMAGE_ENEMY_EXEGGUTOR.png",
+                "name": "IMAGE_ENEMY_EXEGGUTOR",
                 "type": "png"
             },
             {
-                "file": "images/enemy-gastly.png",
-                "name": "IMAGE_ENEMY_GASTLY",
+                "file": "images/IMAGE_ENEMY_MEW.png",
+                "name": "IMAGE_ENEMY_MEW",
                 "type": "png"
             },
             {
-                "file": "images/bw_psyduck_oben.png",
-                "name": "IMAGE_ENEMY_PSYDUCK",
+                "file": "images/IMAGE_ALLY_STARMIE.png",
+                "name": "IMAGE_ALLY_STARMIE",
                 "type": "png"
             },
             {
-                "file": "images/bw_pikachu_oben.png",
-                "name": "IMAGE_ENEMY_PIKACHU",
+                "file": "images/IMAGE_ALLY_HAUNTER.png",
+                "name": "IMAGE_ALLY_HAUNTER",
                 "type": "png"
             },
             {
-                "file": "images/teddyursa_n.png",
-                "name": "IMAGE_NAME_TEDDYURSA",
-                "type": "png"
+                "file": "images/poke_sleep.png",
+                "name": "IMAGE_POKE_SLEEP",
+                "type": "png-trans"
             },
             {
-                "file": "images/seel_n.png",
-                "name": "IMAGE_NAME_SEEL",
-                "type": "png"
-            },
-            {
-                "file": "images/psyduck_n.png",
-                "name": "IMAGE_NAME_PSYDUCK",
-                "type": "png"
-            },
-            {
-                "file": "images/pidgey_n.png",
-                "name": "IMAGE_NAME_PIDGEY",
-                "type": "png"
-            },
-            {
-                "file": "images/haunter_n.png",
-                "name": "IMAGE_NAME_HAUNTER",
-                "type": "png"
-            },
-            {
-                "file": "images/gastly_n.png",
-                "name": "IMAGE_NAME_GASTLY",
-                "type": "png"
-            },
-            {
-                "file": "images/menu_icon_91w.png",
+                "file": "images/IMAGE_MENU_ICON.png",
                 "menuIcon": true,
                 "name": "IMAGE_MENU_ICON",
                 "type": "png"
             },
             {
+                "file": "images/IMAGE_HEALTH_8.png",
+                "name": "IMAGE_HEALTH_8",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_HEALTH_6.png",
+                "name": "IMAGE_HEALTH_6",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_HEALTH_4.png",
+                "name": "IMAGE_HEALTH_4",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_HEALTH_2.png",
+                "name": "IMAGE_HEALTH_2",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_HEALTH_0.png",
+                "name": "IMAGE_HEALTH_0",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_WEEDLE.png",
+                "name": "IMAGE_ENEMY_WEEDLE",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_TURTWIG.png",
+                "name": "IMAGE_ENEMY_TURTWIG",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_TORCHIC.png",
+                "name": "IMAGE_ENEMY_TORCHIC",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_SLOWPOKE.png",
+                "name": "IMAGE_ENEMY_SLOWPOKE",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_SEEL.png",
+                "name": "IMAGE_ENEMY_SEEL",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_PSYDUCK.png",
+                "name": "IMAGE_ENEMY_PSYDUCK",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_PIKACHU.png",
+                "name": "IMAGE_ENEMY_PIKACHU",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_OSHAWATT.png",
+                "name": "IMAGE_ENEMY_OSHAWATT",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_MISSINGNO.png",
+                "name": "IMAGE_ENEMY_MISSINGNO",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_MAGIKARP.png",
+                "name": "IMAGE_ENEMY_MAGIKARP",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_LORD_HELIX.png",
+                "name": "IMAGE_ENEMY_LORD_HELIX",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_HOUNDOUR.png",
+                "name": "IMAGE_ENEMY_HOUNDOUR",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_HAUNTER.png",
+                "name": "IMAGE_ENEMY_HAUNTER",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_GASTLY.png",
+                "name": "IMAGE_ENEMY_GASTLY",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_FROAKIE.png",
+                "name": "IMAGE_ENEMY_FROAKIE",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_FOONGUS.png",
+                "name": "IMAGE_ENEMY_FOONGUS",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_FERROSEED.png",
+                "name": "IMAGE_ENEMY_FERROSEED",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_EEVEE.png",
+                "name": "IMAGE_ENEMY_EEVEE",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_DITTO.png",
+                "name": "IMAGE_ENEMY_DITTO",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_CYNDAQUIL.png",
+                "name": "IMAGE_ENEMY_CYNDAQUIL",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_CHARMANDER.png",
+                "name": "IMAGE_ENEMY_CHARMANDER",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_BLUE.png",
+                "name": "IMAGE_ENEMY_BLUE",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_BACKGROUND.png",
+                "name": "IMAGE_BACKGROUND",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_TREECKO.png",
+                "name": "IMAGE_ALLY_TREECKO",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_TEPIG.png",
+                "name": "IMAGE_ALLY_TEPIG",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_TEDDYURSA.png",
+                "name": "IMAGE_ALLY_TEDDYURSA",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_RED.png",
+                "name": "IMAGE_ALLY_RED",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_PSYDUCK.png",
+                "name": "IMAGE_ALLY_PSYDUCK",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_PIPLUP.png",
+                "name": "IMAGE_ALLY_PIPLUP",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_PIKACHU.png",
+                "name": "IMAGE_ALLY_PIKACHU",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_PIDGEY.png",
+                "name": "IMAGE_ALLY_PIDGEY",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_OLDMAN.png",
+                "name": "IMAGE_ALLY_OLDMAN",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_MEWTWO.png",
+                "name": "IMAGE_ALLY_MEWTWO",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_MAGIKARP.png",
+                "name": "IMAGE_ALLY_MAGIKARP",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_LUGIA.png",
+                "name": "IMAGE_ALLY_LUGIA",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_LARVITAR.png",
+                "name": "IMAGE_ALLY_LARVITAR",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_KRABBY.png",
+                "name": "IMAGE_ALLY_KRABBY",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_GEODUDE.png",
+                "name": "IMAGE_ALLY_GEODUDE",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_FENNEKIN.png",
+                "name": "IMAGE_ALLY_FENNEKIN",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_DITTO.png",
+                "name": "IMAGE_ALLY_DITTO",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_CHIKORITA.png",
+                "name": "IMAGE_ALLY_CHIKORITA",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_BULBASAUR.png",
+                "name": "IMAGE_ALLY_BULBASAUR",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ALLY_ARON.png",
+                "name": "IMAGE_ALLY_ARON",
+                "type": "png"
+            },
+            {
+                "file": "images/BATTERY_CHARGE.png",
+                "name": "BATTERY_CHARGE",
+                "type": "png"
+            },
+            {
+                "characterRegex": "[0-9:]",
                 "compatibility": "2.7",
                 "file": "fonts/Pokemon_GB.ttf",
-                "name": "FONT_DATE_7",
+                "name": "FONT_TIME_24",
                 "type": "font"
             },
             {
@@ -100,385 +321,8 @@
             {
                 "compatibility": "2.7",
                 "file": "fonts/Pokemon_GB.ttf",
-                "name": "FONT_DATE_9",
+                "name": "FONT_DATE_7",
                 "type": "font"
-            },
-            {
-                "characterRegex": "[0-9:]",
-                "compatibility": "2.7",
-                "file": "fonts/Pokemon_GB.ttf",
-                "name": "FONT_TIME_24",
-                "type": "font"
-            },
-            {
-                "file": "images/background.png",
-                "name": "IMAGE_BACKGROUND",
-                "type": "png"
-            },
-            {
-                "file": "images/datenum_0.png",
-                "name": "IMAGE_ENEMY_BLUE",
-                "type": "png"
-            },
-            {
-                "file": "images/datenum_1.png",
-                "name": "IMAGE_ENEMY_CHARMANDER",
-                "type": "png"
-            },
-            {
-                "file": "images/datenum_2.png",
-                "name": "IMAGE_ENEMY_CYNDAQUIL",
-                "type": "png"
-            },
-            {
-                "file": "images/datenum_3.png",
-                "name": "IMAGE_ENEMY_DITTO",
-                "type": "png"
-            },
-            {
-                "file": "images/datenum_4.png",
-                "name": "IMAGE_ENEMY_EEVEE",
-                "type": "png"
-            },
-            {
-                "file": "images/datenum_5.png",
-                "name": "IMAGE_ENEMY_FROAKIE",
-                "type": "png"
-            },
-            {
-                "file": "images/datenum_6.png",
-                "name": "IMAGE_ENEMY_MAGIKARP",
-                "type": "png"
-            },
-            {
-                "file": "images/datenum_7.png",
-                "name": "IMAGE_ENEMY_MISSINGNO",
-                "type": "png"
-            },
-            {
-                "file": "images/datenum_8.png",
-                "name": "IMAGE_ENEMY_OSHAWATT",
-                "type": "png"
-            },
-            {
-                "file": "images/datenum_9.png",
-                "name": "IMAGE_ENEMY_TORCHIC",
-                "type": "png"
-            },
-            {
-                "file": "images/chi_s.png",
-                "name": "IMAGE_ALLY_CHIKORITA",
-                "type": "png"
-            },
-            {
-                "file": "images/bul_s.png",
-                "name": "IMAGE_ALLY_BULBASAUR",
-                "type": "png"
-            },
-            {
-                "file": "images/fen_s.png",
-                "name": "IMAGE_ALLY_FENNEKIN",
-                "type": "png"
-            },
-            {
-                "file": "images/dit1_s.png",
-                "name": "IMAGE_ALLY_DITTO",
-                "type": "png"
-            },
-            {
-                "file": "images/mew_s.png",
-                "name": "IMAGE_ALLY_MEWTWO",
-                "type": "png"
-            },
-            {
-                "file": "images/mag1_s.png",
-                "name": "IMAGE_ALLY_MAGIKARP",
-                "type": "png"
-            },
-            {
-                "file": "images/tep_s.png",
-                "name": "IMAGE_ALLY_TEPIG",
-                "type": "png"
-            },
-            {
-                "file": "images/red_s.png",
-                "name": "IMAGE_ALLY_RED",
-                "type": "png"
-            },
-            {
-                "file": "images/pip_s.png",
-                "name": "IMAGE_ALLY_PIPLUP",
-                "type": "png"
-            },
-            {
-                "file": "images/pik_s.png",
-                "name": "IMAGE_ALLY_PIKACHU",
-                "type": "png"
-            },
-            {
-                "file": "images/tur_s.png",
-                "name": "IMAGE_ENEMY_TURTWIG",
-                "type": "png"
-            },
-            {
-                "file": "images/wee_s.png",
-                "name": "IMAGE_ENEMY_WEEDLE",
-                "type": "png"
-            },
-            {
-                "file": "images/old_s.png",
-                "name": "IMAGE_ALLY_OLDMAN",
-                "type": "png"
-            },
-            {
-                "file": "images/tre_s.png",
-                "name": "IMAGE_ALLY_TREECKO",
-                "type": "png"
-            },
-            {
-                "file": "images/blu_n.png",
-                "name": "IMAGE_NAME_BLUE",
-                "type": "png"
-            },
-            {
-                "file": "images/cha_n.png",
-                "name": "IMAGE_NAME_CHARMANDER",
-                "type": "png"
-            },
-            {
-                "file": "images/cyn_n.png",
-                "name": "IMAGE_NAME_CYNDAQUIL",
-                "type": "png"
-            },
-            {
-                "file": "images/dit_n.png",
-                "name": "IMAGE_NAME_DITTO",
-                "type": "png"
-            },
-            {
-                "file": "images/eev_n.png",
-                "name": "IMAGE_NAME_EEVEE",
-                "type": "png"
-            },
-            {
-                "file": "images/fro_n.png",
-                "name": "IMAGE_NAME_FROAKIE",
-                "type": "png"
-            },
-            {
-                "file": "images/mag_n.png",
-                "name": "IMAGE_NAME_MAGIKARP",
-                "type": "png"
-            },
-            {
-                "file": "images/mis_n.png",
-                "name": "IMAGE_NAME_MISSINGNO",
-                "type": "png"
-            },
-            {
-                "file": "images/osh_n.png",
-                "name": "IMAGE_NAME_OSHAWATT",
-                "type": "png"
-            },
-            {
-                "file": "images/tor_n.png",
-                "name": "IMAGE_NAME_TORCHIC",
-                "type": "png"
-            },
-            {
-                "file": "images/tur_n.png",
-                "name": "IMAGE_NAME_TURTWIG",
-                "type": "png"
-            },
-            {
-                "file": "images/wee_n.png",
-                "name": "IMAGE_NAME_WEEDLE",
-                "type": "png"
-            },
-            {
-                "file": "images/old_n.png",
-                "name": "IMAGE_NAME_OLDMAN",
-                "type": "png"
-            },
-            {
-                "file": "images/bul_n.png",
-                "name": "IMAGE_NAME_BULBASAUR",
-                "type": "png"
-            },
-            {
-                "file": "images/fen_n.png",
-                "name": "IMAGE_NAME_FENNEKIN",
-                "type": "png"
-            },
-            {
-                "file": "images/mew_n.png",
-                "name": "IMAGE_NAME_MEWTWO",
-                "type": "png"
-            },
-            {
-                "file": "images/tep_n.png",
-                "name": "IMAGE_NAME_TEPIG",
-                "type": "png"
-            },
-            {
-                "file": "images/red_n.png",
-                "name": "IMAGE_NAME_RED",
-                "type": "png"
-            },
-            {
-                "file": "images/pip_n.png",
-                "name": "IMAGE_NAME_PIPLUP",
-                "type": "png"
-            },
-            {
-                "file": "images/pik_n.png",
-                "name": "IMAGE_NAME_PIKACHU",
-                "type": "png"
-            },
-            {
-                "file": "images/chi_n.png",
-                "name": "IMAGE_NAME_CHIKORITA",
-                "type": "png"
-            },
-            {
-                "file": "images/tre_n.png",
-                "name": "IMAGE_NAME_TREECKO",
-                "type": "png"
-            },
-            {
-                "file": "images/d0.png",
-                "name": "IMAGE_HEALTH_0",
-                "type": "png"
-            },
-            {
-                "file": "images/d2.png",
-                "name": "IMAGE_HEALTH_2",
-                "type": "png"
-            },
-            {
-                "file": "images/d4.png",
-                "name": "IMAGE_HEALTH_4",
-                "type": "png"
-            },
-            {
-                "file": "images/d6.png",
-                "name": "IMAGE_HEALTH_6",
-                "type": "png"
-            },
-            {
-                "file": "images/d8.png",
-                "name": "IMAGE_HEALTH_8",
-                "type": "png"
-            },
-            {
-                "file": "images/poke_sleep.png",
-                "name": "IMAGE_POKE_SLEEP",
-                "type": "png-trans"
-            },
-            {
-                "file": "images/Ferroseed_enemy.png",
-                "name": "IMAGE_ENEMY_FERROSEED",
-                "type": "png"
-            },
-            {
-                "file": "images/Foongus_enemy.png",
-                "name": "IMAGE_ENEMY_FOONGUS",
-                "type": "png"
-            },
-            {
-                "file": "images/Lugia_ally.png",
-                "name": "IMAGE_ALLY_LUGIA",
-                "type": "png"
-            },
-            {
-                "file": "images/Krabby_ally.png",
-                "name": "IMAGE_ALLY_KRABBY",
-                "type": "png"
-            },
-            {
-                "file": "images/ferroseed_n.png",
-                "name": "IMAGE_NAME_FERROSEED",
-                "type": "png"
-            },
-            {
-                "file": "images/Krabby_name.png",
-                "name": "IMAGE_NAME_KRABBY",
-                "type": "png"
-            },
-            {
-                "file": "images/Lugia_name.png",
-                "name": "IMAGE_NAME_LUGIA",
-                "type": "png"
-            },
-            {
-                "file": "images/foongus_n.png",
-                "name": "IMAGE_NAME_FOONGUS",
-                "type": "png"
-            },
-            {
-                "file": "images/charge.png",
-                "name": "BATTERY_CHARGE",
-                "type": "png"
-            },
-            {
-                "file": "images/ally-aron.png",
-                "name": "IMAGE_ALLY_ARON",
-                "type": "png"
-            },
-            {
-                "file": "images/ally-geodude.png",
-                "name": "IMAGE_ALLY_GEODUDE",
-                "type": "png"
-            },
-            {
-                "file": "images/ally-larvitar.png",
-                "name": "IMAGE_ALLY_LARVITAR",
-                "type": "png"
-            },
-            {
-                "file": "images/enemy-houndour.png",
-                "name": "IMAGE_ENEMY_HOUNDOUR",
-                "type": "png"
-            },
-            {
-                "file": "images/enemy-LORD HELIX.png",
-                "name": "IMAGE_ENEMY_LORD_HELIX",
-                "type": "png"
-            },
-            {
-                "file": "images/enemy-slowpoke.png",
-                "name": "IMAGE_ENEMY_SLOWPOKE",
-                "type": "png"
-            },
-            {
-                "file": "images/Aron_name.png",
-                "name": "IMAGE_NAME_ARON",
-                "type": "png"
-            },
-            {
-                "file": "images/Geodude_name.png",
-                "name": "IMAGE_NAME_GEODUDE",
-                "type": "png"
-            },
-            {
-                "file": "images/Houndour_name.png",
-                "name": "IMAGE_NAME_HOUNDOUR",
-                "type": "png"
-            },
-            {
-                "file": "images/Larvitar_name.png",
-                "name": "IMAGE_NAME_LARVITAR",
-                "type": "png"
-            },
-            {
-                "file": "images/LordHelix_name.png",
-                "name": "IMAGE_NAME_LORD_HELIX",
-                "type": "png"
-            },
-            {
-                "file": "images/Slowpoke_name.png",
-                "name": "IMAGE_NAME_SLOWPOKE",
-                "type": "png"
             }
         ]
     },
