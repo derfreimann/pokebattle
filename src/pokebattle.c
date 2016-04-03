@@ -33,7 +33,7 @@ static Layer *battery_layer;
 static bool initiate_watchface = true;
 
 int NUM_POK_ALLY  = 22;
-int NUM_POK_ENEMY = 22;
+int NUM_POK_ENEMY = 28;
 
 //random number shenanigans
 int seed_enemy2, seed_ally2;
@@ -62,7 +62,13 @@ const int POK_ENEMY_IMAGE_RESOURCE_IDS[] = {
  	RESOURCE_ID_IMAGE_ENEMY_FOONGUS,	// 18 NEU
 	RESOURCE_ID_IMAGE_ENEMY_SLOWPOKE,	// 19 NEU
 	RESOURCE_ID_IMAGE_ENEMY_HOUNDOUR,	// 20 NEU
-	RESOURCE_ID_IMAGE_ENEMY_LORD_HELIX	// 21 NEU
+	RESOURCE_ID_IMAGE_ENEMY_LORD_HELIX,	// 21 NEU
+  RESOURCE_ID_IMAGE_ENEMY_MEW,
+  RESOURCE_ID_IMAGE_ENEMY_EXEGGUTOR,
+  RESOURCE_ID_IMAGE_ENEMY_GENGAR,
+  RESOURCE_ID_IMAGE_ENEMY_STARMIE,
+  RESOURCE_ID_IMAGE_ENEMY_GOLEM,
+  RESOURCE_ID_IMAGE_ENEMY_ZAPDOS
 };
 
 /* ---POKEMON ENEMY NAME--- */
@@ -88,7 +94,13 @@ char* NAMES_ENEMY_IMAGE_RESOURCE_IDS[] = {
  	"FOONGUS",
 	"SLOWPOKE",
 	"HOUNDOUR",
-	"LORD_HELIX"
+	"LORD_HELIX",
+  "MEW",
+  "EXEGGUTOR",
+  "GENGAR",
+  "STARMIE",
+  "GOLEM",
+  "ZAPDOS"
 };
 
 /* ---POKEMON ALLY--- */
@@ -268,7 +280,7 @@ static void update_display(struct tm *current_time) {
     text_layer_set_text(text_name_enemy_layer, NAMES_ENEMY_IMAGE_RESOURCE_IDS[random_enemy]);
 
 			
- 	  set_container_image(&pok_digits_images[1], pok_digits_layers[1], POK_ENEMY_IMAGE_RESOURCE_IDS[random_enemy], GPoint(90, 5));
+ 	  set_container_image(&pok_digits_images[1], pok_digits_layers[1], POK_ENEMY_IMAGE_RESOURCE_IDS[random_enemy], GPoint(86, 5));
  	  set_container_image(&pok_digits_images[0], pok_digits_layers[0], POK_ALLY_IMAGE_RESOURCE_IDS[random_ally], GPoint(5, 60));
     APP_LOG(APP_LOG_LEVEL_DEBUG, "drawing Pokemon complete!!!");
 	}

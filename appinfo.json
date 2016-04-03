@@ -9,6 +9,36 @@
     "resources": {
         "media": [
             {
+                "file": "images/IMAGE_ENEMY_ZAPDOS.png",
+                "name": "IMAGE_ENEMY_ZAPDOS",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_GOLEM.png",
+                "name": "IMAGE_ENEMY_GOLEM",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_STARMIE.png",
+                "name": "IMAGE_ENEMY_STARMIE",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_GENGAR.png",
+                "name": "IMAGE_ENEMY_GENGAR",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_EXEGGUTOR.png",
+                "name": "IMAGE_ENEMY_EXEGGUTOR",
+                "type": "png"
+            },
+            {
+                "file": "images/IMAGE_ENEMY_MEW.png",
+                "name": "IMAGE_ENEMY_MEW",
+                "type": "png"
+            },
+            {
                 "file": "images/IMAGE_ALLY_STARMIE.png",
                 "name": "IMAGE_ALLY_STARMIE",
                 "type": "png"
