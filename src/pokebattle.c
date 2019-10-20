@@ -296,7 +296,15 @@ static void update_display(struct tm *current_time) {
 	//'level_int++' was originally inside the 'if( ((current_time->tm_min == 0) && (current_time->' -if clause, but had to be isolated for the persistent storage used to save the level state!
 	//...otherwhise it would have add 1 level everytime the watchface got initiated... and that would be CHEATING! @_@
 	if ((current_time->tm_min == 0) && (current_time->tm_sec == 0)) {
-		level_int++;
+		if (level_int < 100)
+		{
+			level_int++;
+		}
+		else
+		{
+			level_int = 1;
+		}
+		
    		APP_LOG(APP_LOG_LEVEL_DEBUG, "+1 [level] added! :)");
 		
 		// LEVEL TEXT
